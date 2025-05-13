@@ -17,7 +17,7 @@ const resumeData = {
       {
         title: "",
         company: "",
-        location: "Dnipro, Ukraine",
+        location: "",
         period: "",
         details: [
          
