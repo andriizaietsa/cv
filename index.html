@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andrii Zaiets - QA Engineer</title>
+  <title>Andrii Zaiets QA Engineer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header>
       <img src="image.jpg" alt="Your Photo" />
       <div>
-        <h1 id="name">Your Name</h1>
+        <h1 id="name">Your Name QA Engineer</h1>
         <p class="contact" id="contact-info">Loading contact info...</p>
       </div>
     </header>
@@ -32,7 +32,8 @@
     // Load personal info
     document.getElementById("name").textContent = resumeData.name;
     document.getElementById("contact-info").innerHTML = `
-      Email: ${resumeData.email} | Phone: ${resumeData.phone} | 
+      Email: ${resumeData.email}<br />
+      Phone: ${resumeData.phone}<br />
       LinkedIn: <a class="link" href="${resumeData.linkedin}" target="_blank">${resumeData.linkedin}</a>
     `;
     document.getElementById("summary").textContent = resumeData.profileSummary;
