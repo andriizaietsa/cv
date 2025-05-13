@@ -1,7 +1,7 @@
 const resumeData = {
     name: "Andrii Zaiets",
     email: "zaietsandriia@gmail.com",
-    phone: "",
+    phone: "380675762887",
     linkedin: "https://www.linkedin.com/in/andrii-zaiets-74348b208/",
     profileSummary: "QA Engineer with over 4 years of experience in web and mobile testing. Strong background in automation, manual testing, and CI tools. Skilled in delivering quality products across financial, education, travel, and sports domains.",
     workExperience: [
