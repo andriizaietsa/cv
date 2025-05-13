@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andrii Zaiets - QA Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="image.jpg" alt="Your Photo" />
+      <div>
+        <h1 id="name">Your Name</h1>
+        <p class="contact" id="contact-info">Loading contact info...</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Profile Summary</h2>
+      <p id="summary">Loading summary...</p>
+    </section>
+
+    <section class="section" id="work-experience">
+      <h2 class="section-title">Work Experience</h2>
+      <!-- Jobs will be inserted here dynamically -->
+    </section>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    // Load personal info
+    document.getElementById("name").textContent = resumeData.name;
+    document.getElementById("contact-info").innerHTML = `
+      Email: ${resumeData.email} | Phone: ${resumeData.phone} | 
+      LinkedIn: <a class="link" href="${resumeData.linkedin}" target="_blank">${resumeData.linkedin}</a>
+    `;
+    document.getElementById("summary").textContent = resumeData.profileSummary;
+
+    // Load work experience
+    const workSection = document.getElementById("work-experience");
+    resumeData.workExperience.forEach(job => {
+      const div = document.createElement("div");
+      div.className = "content-wrapper";
+      div.innerHTML = `
+        <h3>${job.title} – ${job.company}</h3>
+        <p><em>${job.period} | ${job.location}</em></p>
+        <ul>${job.details.map(detail => `<li>${detail}</li>`).join('')}</ul>
+      `;
+      workSection.appendChild(div);
+    });
+  </script>
+</body>
+</html>
