@@ -7,7 +7,7 @@ const resumeData = {
     workExperience: [
       {
         title: "",
-        company: "",
+        company: "  ",
         location:"",
         period: "",
         details: [
